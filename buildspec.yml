@@ -8,5 +8,4 @@ phases:
   pre_build:
     commands:
       - echo Installing source NPM dependencies...
-      - cd hello-world && npm install
-      - cd hello-world && npm run test
+      - cd hello-world && npm install && npm run test
