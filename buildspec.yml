@@ -9,3 +9,12 @@ phases:
     commands:
       - echo Installing source NPM dependencies...
       - cd hello-world && npm install && npm run test
+  build:
+    command:
+      - echo creating package
+      - cd hello-world && zip -r app.zip .
+
+  artifacts:
+    files:
+      - "app.zip"
+    base-directory: hello-world
