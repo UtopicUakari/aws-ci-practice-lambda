@@ -13,6 +13,8 @@ phases:
     command:
       - echo creating package
       - cd hello-world && zip -r app.zip .
+      - cd ..
+      - ls -al
 artifacts:
   files:
     - "app.zip"
