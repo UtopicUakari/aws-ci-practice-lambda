@@ -5,10 +5,10 @@ phases:
   install:
     runtime-versions:
       nodejs: 10
-  pre_build:
-    commands:
-      - echo Installing source NPM dependencies...
-      - cd hello-world && npm install && npm run test
+  # pre_build:
+  #   commands:
+  #     - echo Installing source NPM dependencies...
+  #     - cd hello-world && npm install && npm run test
   build:
     command:
       - echo creating package
