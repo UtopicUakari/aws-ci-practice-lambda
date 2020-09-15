@@ -5,17 +5,12 @@ phases:
   install:
     runtime-versions:
       nodejs: 10
-  # pre_build:
-  #   commands:
-  #     - echo Installing source NPM dependencies...
-  #     - cd hello-world && npm install && npm run test
-  build:
+  pre_build:
     commands:
-      - echo creating package
-      - cd hello-world && zip -r app.zip .
-      - cd ..
-      - ls -al
+      - echo Installing source NPM dependencies...
+      - cd hello-world && npm install && npm run test
+
 artifacts:
   files:
-    - "app.zip"
+    - "**/*"
   base-directory: hello-world
